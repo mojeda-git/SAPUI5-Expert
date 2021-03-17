@@ -13,7 +13,7 @@ sap.ui.define([
 
         return Controller.extend("ns.SAPUI5.controller.HelloPanel", {
             onInit: function () {
-
+  
             },
 
             onShowHello: function () {
@@ -26,7 +26,7 @@ sap.ui.define([
             },
 
             onOpenDialog: function () {
-               this.getOwnerComponent().openHelloDialog();
+                this.getOwnerComponent().openHelloDialog();
             }
 
         });

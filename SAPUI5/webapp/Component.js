@@ -23,7 +23,6 @@ sap.ui.define([
                 // }
             },
 
-
             init: function () {
 
                 //call the init function of the parent
@@ -33,17 +32,20 @@ sap.ui.define([
                 this.setModel(Models.createRecipient());
 
                 // set i18n model on the view
-                var i18nModel = new ResourceModel({ bundleName: "ns.SAPUI5.i18n.i18n" });
-                this.setModel(i18nModel, "i18n");
+                // // var i18nModel = new ResourceModel({ bundleName: "ns.SAPUI5.i18n.i18n" });
+                // // this.setModel(i18nModel, "i18n");
 
-                this._helloDialog = new HelloDialog( this.getRootControl());
+                this._helloDialog = new HelloDialog(this.getRootControl());
+
+                //Create the views based on
+                this.getRouter().initialize();
 
             },
-            exit: function(){
+            exit: function () {
                 this._helloDialog.destroy();
                 delete this._helloDialog;
             },
-            openHelloDialog: function(){
+            openHelloDialog: function () {
                 this._helloDialog.open();
             }
         });
